@@ -37,7 +37,7 @@
 :root {
   --radius: 0.875rem;
   /* Deep tech dark */
-  --background: oklch(0.13 0.02 250);
+  --background: oklch(0.11 0.02 255);
   --foreground: oklch(0.97 0.01 250);
   --card: oklch(0.17 0.025 255);
   --card-foreground: oklch(0.97 0.01 250);
@@ -58,9 +58,8 @@
   --ring: oklch(0.78 0.18 200);
   --glow: oklch(0.78 0.18 200);
 
-  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.35 0.18 220 / 0.55), transparent 60%),
-                   radial-gradient(ellipse 60% 50% at 80% 30%, oklch(0.4 0.15 75 / 0.25), transparent 60%),
-                   linear-gradient(180deg, oklch(0.13 0.02 250), oklch(0.1 0.02 255));
+  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 0%, oklch(0.35 0.18 220 / 0.45), transparent 60%),
+                   radial-gradient(ellipse 60% 50% at 80% 30%, oklch(0.4 0.15 75 / 0.2), transparent 60%);
   --gradient-text: linear-gradient(135deg, oklch(0.95 0.05 200), oklch(0.78 0.18 200) 40%, oklch(0.82 0.16 75));
   --gradient-card: linear-gradient(160deg, oklch(0.2 0.03 260 / 0.6), oklch(0.15 0.03 260 / 0.3));
   --shadow-glow: 0 0 40px -8px oklch(0.78 0.18 200 / 0.45);
