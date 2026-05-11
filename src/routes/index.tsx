@@ -8,6 +8,8 @@ import { Problem } from "@/components/Problem";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Features } from "@/components/Features";
 import { RolesMarquee } from "@/components/RolesMarquee";
+import { Timeline } from "@/components/Timeline";
+import { FAQ } from "@/components/FAQ";
 import { UploadCTA } from "@/components/UploadCTA";
 import { Footer } from "@/components/Footer";
 
@@ -34,6 +36,8 @@ function Index() {
         <HowItWorks />
         <Features />
         <RolesMarquee />
+        <Timeline />
+        <FAQ />
         <UploadCTA />
       </main>
       <Footer />
