@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
+import heroBg from "@/assets/hero-bg.png";
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -8,9 +9,27 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1.05, 1.2]);
 
   return (
     <section ref={ref} className="relative min-h-screen bg-hero grid-bg overflow-hidden noise pt-16">
+      {/* parallax photo background */}
+      <motion.div
+        style={{ y: bgY, scale: bgScale, backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-screen"
+        aria-hidden
+      />
+      {/* darken / vignette so foreground stays readable */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 0%, oklch(0.11 0.02 255 / 0.6) 60%, oklch(0.11 0.02 255) 100%)",
+        }}
+        aria-hidden
+      />
+
       {/* floating orbs */}
       <motion.div
         style={{ y: useTransform(scrollYProgress, [0, 1], [0, -100]) }}
