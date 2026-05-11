@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { StarField } from "@/components/StarField";
+import { MouseSpotlight } from "@/components/MouseSpotlight";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Problem } from "@/components/Problem";
@@ -23,6 +25,8 @@ function Index() {
   return (
     <div className="relative">
       <SmoothScroll />
+      <StarField />
+      <MouseSpotlight />
       <Navbar />
       <main>
         <Hero />
